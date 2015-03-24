@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectivesManager:
+    simultaneousObjectives: 2
     objectives: []
     current: []
     completed: []

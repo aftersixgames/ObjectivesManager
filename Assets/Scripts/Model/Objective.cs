@@ -26,11 +26,14 @@ public class Objective {
 	}
 
 	public void AddProgress(float progress) {
-		withProgress(() => currentProgress += progress);
+		SetProgress(currentProgress + progress);
 	}
 
 	public void SetProgress(float progress) {
-		withProgress(() => currentProgress = progress);
+		if (earned) return;
+		currentProgress = progress;
+		if (saveEveryProgress) Save();
+		Earn();
 	}
 
 	public void Load() {
@@ -40,13 +43,6 @@ public class Objective {
 	public void Save() {
 		PlayerPrefs.SetFloat(StoreKey, currentProgress);
 		PlayerPrefs.Save();
-	}
-
-	private void withProgress(Action action) {
-		if (earned) return;
-		action();
-		if (saveEveryProgress) Save();
-		Earn();
 	}
 
 	private void Earn() {

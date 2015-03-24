@@ -7,7 +7,7 @@ public class ObjectivesController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		objectivesManager.Init ();	
 	}
 	
 	// Update is called once per frame
