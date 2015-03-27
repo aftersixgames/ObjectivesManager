@@ -18,4 +18,14 @@ public class ObjectiveGUI : MonoBehaviour {
 		description.text = objective.description;
 		progress.text = objective.CurrentProgress + " / " + objective.targetProgress;
 	}
+
+	public void Show(Objective objective) {
+		this.objective = objective;
+		gameObject.SetActive(true);
+		Invoke("Hide", 5);
+	}
+
+	public void Hide() {
+		gameObject.SetActive(false);
+	}
 }

@@ -50,7 +50,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &167714
 GameObject:
   m_ObjectHideFlags: 1
@@ -132,9 +132,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectivesManager:
     simultaneousObjectives: 2
-    objectives: []
+    objectives:
+    - key: test
+      description: test
+      targetProgress: 10
+      saveEveryProgress: 0
+      currentProgress: 0
+      earned: 0
     current: []
     completed: []
+  objectiveGUI: {fileID: 11406508}
 --- !u!114 &11433328
 MonoBehaviour:
   m_ObjectHideFlags: 1

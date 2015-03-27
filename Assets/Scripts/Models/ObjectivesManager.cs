@@ -12,13 +12,24 @@ public class ObjectivesManager {
 	public List<Objective> completed;
 
 	public void Init() {
+		Reload();
+	}
+
+	public void Reload() {
 		LoadObjectives();
 		PrepareCurrentObjectives();
 	}
 
-	public void AddProgress(string key, float progress) {
+	public Objective AddProgress(string key, float progress) {
 		Objective objective = GetObjective(key);
-		if (objective != null) objective.AddProgress(progress);
+		if (objective != null && objective.AddProgress(progress)) {
+			return objective;
+		}
+		return null;
+	}
+
+	public Objective GetObjective(string key) {
+		return current.Find(a => a.key == key);
 	}
 
 	private void LoadObjectives() {
@@ -45,9 +56,4 @@ public class ObjectivesManager {
 			objectives.RemoveAt(0);
 		}
 	}
-
-	private Objective GetObjective(string key) {
-		return current.Find(a => a.key == key);
-	}
-
 }

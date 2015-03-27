@@ -25,15 +25,15 @@ public class Objective {
 		get { return "objectives_manager:objective:" + key; }
 	}
 
-	public void AddProgress(float progress) {
-		SetProgress(currentProgress + progress);
+	public bool AddProgress(float progress) {
+		return SetProgress(currentProgress + progress);
 	}
 
-	public void SetProgress(float progress) {
-		if (earned) return;
+	public bool SetProgress(float progress) {
+		if (earned) return false;
 		currentProgress = progress;
 		if (saveEveryProgress) Save();
-		Earn();
+		return Earn();
 	}
 
 	public void Load() {
@@ -45,11 +45,13 @@ public class Objective {
 		PlayerPrefs.Save();
 	}
 
-	private void Earn() {
+	private bool Earn() {
 		if (currentProgress >= targetProgress) {
 			earned = true;
 			currentProgress = targetProgress;
 			Save();
+			return true;
 		}
+		return false;
 	}
 }
