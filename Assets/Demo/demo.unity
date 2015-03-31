@@ -329,6 +329,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11411890, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
+      propertyPath: objectivesManager.objectives.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 489568, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -359,6 +363,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489568, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411890, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
+      propertyPath: objectivesManager.objectives.Array.data[1].key
+      value: test2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411890, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
+      propertyPath: objectivesManager.objectives.Array.data[1].description
+      value: another test
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411890, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
+      propertyPath: objectivesManager.objectives.Array.data[1].targetProgress
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 159682, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

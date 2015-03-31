@@ -111,11 +111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective:
-    key: obj
-    description: Description of the objective
-    targetProgress: 100
+    key: 
+    description: 
+    targetProgress: 0
     saveEveryProgress: 0
-    currentProgress: 20
+    currentProgress: 0
     earned: 0
   description: {fileID: 11433328}
   progress: {fileID: 11490764}

@@ -14,9 +14,10 @@ public class ObjectivesController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown (KeyCode.Space)) {
 			addProgress ("test", 1);
-
+			addProgress ("test2", 1);
+		}
 	}
 
 	void addProgress(string key, float progress) {
