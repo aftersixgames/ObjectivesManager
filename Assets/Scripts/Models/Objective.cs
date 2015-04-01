@@ -9,6 +9,8 @@ public class Objective {
 	public string description;
 	public float targetProgress;
 	public bool saveEveryProgress = false;
+	public Sprite enabledImage;
+	public Sprite disabledImage;
 
 	public float currentProgress;
 	public bool earned = false;
@@ -23,6 +25,12 @@ public class Objective {
 
 	public string StoreKey {
 		get { return "objectives_manager:objective:" + key; }
+	}
+
+	public Sprite Image {
+		get {
+			return earned ? enabledImage : disabledImage;
+		}
 	}
 
 	public bool AddProgress(float progress) {

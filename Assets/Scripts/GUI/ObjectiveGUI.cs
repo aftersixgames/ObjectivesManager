@@ -9,13 +9,19 @@ public class ObjectiveGUI : MonoBehaviour {
 	public Objective objective = null;
 	public Text description;
 	public Text progress;
+	public Image image;
 	private Queue<Objective> objectivesToShow = new Queue<Objective>();
 	private bool show = true;
 
 
 	void Update () {
+
 		description.text = objective.description;
 		progress.text = objective.CurrentProgress + " / " + objective.targetProgress;
+		if (objective.Image != null) {
+			print (objective.Image);
+			image.sprite = objective.Image;
+		}
 	}
 
 	public void Show(Objective objective) {

@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &119328
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22498338}
+  - 222: {fileID: 22271894}
+  - 114: {fileID: 11461874}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &132416
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,10 +132,13 @@ MonoBehaviour:
     description: 
     targetProgress: 0
     saveEveryProgress: 0
+    enabledImage: {fileID: 0}
+    disabledImage: {fileID: 0}
     currentProgress: 0
     earned: 0
   description: {fileID: 11433328}
   progress: {fileID: 11490764}
+  image: {fileID: 11461874}
 --- !u!114 &11411890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,8 +155,18 @@ MonoBehaviour:
     objectives:
     - key: test
       description: test
-      targetProgress: 10
+      targetProgress: 2
       saveEveryProgress: 0
+      enabledImage: {fileID: 21300000, guid: 335b37ca974b42d4e9f81466e8c0b80a, type: 3}
+      disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
+      currentProgress: 0
+      earned: 0
+    - key: test2
+      description: another test
+      targetProgress: 2
+      saveEveryProgress: 0
+      enabledImage: {fileID: 21300000, guid: 335b37ca974b42d4e9f81466e8c0b80a, type: 3}
+      disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
       currentProgress: 0
       earned: 0
     current: []
@@ -205,6 +235,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11461874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11484838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,6 +309,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167714}
+--- !u!222 &22271894
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119328}
 --- !u!222 &22288348
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -334,6 +391,7 @@ RectTransform:
   m_Children:
   - {fileID: 22483800}
   - {fileID: 22424006}
+  - {fileID: 22498338}
   m_Father: {fileID: 22446872}
   m_RootOrder: 0
   m_AnchorMin: {x: .254019678, y: .0549531579}
@@ -355,8 +413,25 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: .5, y: 5.30000019}
-  m_SizeDelta: {x: -24.2000008, y: -28.5}
+  m_AnchoredPosition: {x: 37.0999985, y: 5.30000019}
+  m_SizeDelta: {x: -97.5, y: -28.3999996}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22498338
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119328}
+  m_LocalRotation: {x: 0, y: 0, z: -.000617191195, w: .999999821}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22477300}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .0226673894, y: .137487367}
+  m_AnchorMax: {x: .166666314, y: .906000018}
+  m_AnchoredPosition: {x: -.494094849, y: -1.31341553}
+  m_SizeDelta: {x: .699996948, y: 1.70000076}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
