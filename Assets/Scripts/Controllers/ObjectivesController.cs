@@ -6,13 +6,11 @@ public class ObjectivesController : MonoBehaviour {
 	public ObjectivesManager objectivesManager;
 	public ObjectiveGUI objectiveGUI;
 
-	// Use this for initialization
 	void Start () {
 		PlayerPrefs.DeleteAll ();
-		objectivesManager.Init();	
+		objectivesManager.Init();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			addProgress ("test", 1);

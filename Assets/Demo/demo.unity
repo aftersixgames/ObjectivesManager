@@ -361,6 +361,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11411890, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
+      propertyPath: objectivesManager.objectives.Array.data[1].targetProgress
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e404da90f652f4458f5ee4b057044d5, type: 2}
   m_IsPrefabParent: 0

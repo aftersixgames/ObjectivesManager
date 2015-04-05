@@ -10,16 +10,16 @@ public class ObjectiveGUI : MonoBehaviour {
 	public Text description;
 	public Text progress;
 	public Image image;
+	public AudioSource audioSource;
+
 	private Queue<Objective> objectivesToShow = new Queue<Objective>();
 	private bool show = true;
 
 
 	void Update () {
-
 		description.text = objective.description;
 		progress.text = objective.CurrentProgress + " / " + objective.targetProgress;
 		if (objective.Image != null) {
-			print (objective.Image);
 			image.sprite = objective.Image;
 		}
 	}
@@ -34,6 +34,7 @@ public class ObjectiveGUI : MonoBehaviour {
 			show = false;
 			objective = objectivesToShow.Dequeue();
 			gameObject.SetActive(true);
+			audioSource.Play();
 			Invoke("HideObjective", 5);
 		}
 	}
