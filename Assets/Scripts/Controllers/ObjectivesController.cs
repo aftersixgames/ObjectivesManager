@@ -4,7 +4,7 @@ using System.Collections;
 public class ObjectivesController : MonoBehaviour {
 
 	public ObjectivesManager objectivesManager;
-	public ObjectiveGUI objectiveGUI;
+	public EarnedObjectiveUI earnedObjectiveUI;
 
 	void Start () {
 		PlayerPrefs.DeleteAll ();
@@ -19,9 +19,9 @@ public class ObjectivesController : MonoBehaviour {
 	}
 
 	void addProgress(string key, float progress) {
-		Objective earnedObjective = objectivesManager.AddProgress(key, progress);
-		if (earnedObjective != null) {
-			objectiveGUI.Show(earnedObjective);
+		Objective earned = objectivesManager.AddProgress(key, progress);
+		if (earned != null) {
+			earnedObjectiveUI.Show(earned);
 		}
 	}
 
