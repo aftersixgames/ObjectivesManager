@@ -4,8 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ObjectiveUI : MonoBehaviour {
-	
-	[HideInInspector]
+
 	public Objective objective = null;
 	public Text description;
 	public Text progress;
