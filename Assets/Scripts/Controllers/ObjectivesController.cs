@@ -19,8 +19,12 @@ public class ObjectivesController : MonoBehaviour {
 			AddProgress ("test2", 1);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Escape)) {
+		if (Input.GetKeyDown(KeyCode.F1)) {
 			ShowCurrentObjectives(() => { print("Hide"); });
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			HideCurrentObjectives();
 		}
 
 		if (Input.GetKeyDown(KeyCode.Return)) {
@@ -42,6 +46,10 @@ public class ObjectivesController : MonoBehaviour {
 	public void ShowCurrentObjectives(Action onHide) {
 		currentObjectivesUI.objectives = objectivesManager.current;
 		currentObjectivesUI.Show(onHide);
+	}
+
+	public void HideCurrentObjectives() {
+		currentObjectivesUI.Hide();
 	}
 
 	public static ObjectivesController getCurrent() {

@@ -12,22 +12,27 @@ public class CurrentObjectivesUI : MonoBehaviour {
 	public GameObject panel;
 
 	private Action onHide;
+	private bool isShown;
 
 	public void Show() {
 		Show(null);
 	}
 
 	public void Show(Action onHide) {
+		if (isShown) return;
+
 		this.onHide = onHide;
 		LoadObjectives();
+		isShown = true;
 		panel.SetActive(true);
 	}
 
 	public void Hide() {
+		if (!isShown) return;
+
+		isShown = false;
 		panel.SetActive(false);
-		if (onHide != null) {
-			onHide();
-		}
+		if (onHide != null) onHide();
 	}
 
 	private void LoadObjectives() {
