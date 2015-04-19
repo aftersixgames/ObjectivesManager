@@ -23,6 +23,7 @@ public class ObjectivesManager {
 	public Objective AddProgress(string key, float progress) {
 		Objective objective = GetObjective(key);
 		if (objective != null && objective.AddProgress(progress)) {
+			completed.Add(objective);
 			return objective;
 		}
 		return null;

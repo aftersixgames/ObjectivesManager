@@ -49,8 +49,10 @@
      <Compile Include="Assets\Scripts\Controllers\ObjectivesController.cs" />
      <Compile Include="Assets\Scripts\Models\Objective.cs" />
      <Compile Include="Assets\Scripts\Models\ObjectivesManager.cs" />
+     <Compile Include="Assets\Scripts\UI\CompletedObjectivesUI.cs" />
      <Compile Include="Assets\Scripts\UI\CurrentObjectivesUI.cs" />
      <Compile Include="Assets\Scripts\UI\EarnedObjectiveUI.cs" />
+     <Compile Include="Assets\Scripts\UI\ListObjectivesUI.cs" />
      <Compile Include="Assets\Scripts\UI\ObjectiveUI.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

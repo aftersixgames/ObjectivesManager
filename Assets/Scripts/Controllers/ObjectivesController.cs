@@ -7,6 +7,7 @@ public class ObjectivesController : MonoBehaviour {
 	public ObjectivesManager objectivesManager;
 	public EarnedObjectiveUI earnedObjectiveUI;
 	public CurrentObjectivesUI currentObjectivesUI;
+	public CompletedObjectivesUI completedObjectivesUI;
 
 	void Start () {
 		PlayerPrefs.DeleteAll ();
@@ -19,12 +20,17 @@ public class ObjectivesController : MonoBehaviour {
 			AddProgress ("test2", 1);
 		}
 
+		if (Input.GetKeyDown(KeyCode.F2)) {
+			ShowCompletedObjectives(() => { print("Hide completed"); });
+		}
+
 		if (Input.GetKeyDown(KeyCode.F1)) {
-			ShowCurrentObjectives(() => { print("Hide"); });
+			ShowCurrentObjectives(() => { print("Hide current"); });
 		}
 
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			HideCurrentObjectives();
+			HideCompletedObjectives();
 		}
 
 		if (Input.GetKeyDown(KeyCode.Return)) {
@@ -50,6 +56,19 @@ public class ObjectivesController : MonoBehaviour {
 
 	public void HideCurrentObjectives() {
 		currentObjectivesUI.Hide();
+	}
+
+	public void ShowCompletedObjectives() {
+		completedObjectivesUI.Show(null);
+	}
+
+	public void ShowCompletedObjectives(Action onHide) {
+		completedObjectivesUI.objectives = objectivesManager.completed;
+		completedObjectivesUI.Show(onHide);
+	}
+
+	public void HideCompletedObjectives() {
+		completedObjectivesUI.Hide();
 	}
 
 	public static ObjectivesController getCurrent() {
