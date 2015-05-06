@@ -3,11 +3,7 @@ using System.Collections;
 
 public class SceneController : MonoBehaviour {
 
-	private ObjectivesController objectivesController;
-
-	void Start () {
-		objectivesController = ObjectivesController.GetCurrent();	
-	}
+	public ObjectivesController objectivesController;
 
 	void Update () {
 
@@ -22,7 +18,7 @@ public class SceneController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.F1)) {
-			objectivesController.ShowCurrentObjectives(() => { print("Current Objectives Closed"); });
+			objectivesController.ShowCurrentObjectives();
 		}
 
 		if (Input.GetKeyDown(KeyCode.F2)) {
@@ -36,6 +32,11 @@ public class SceneController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.F4)) {
 			PlayerPrefs.DeleteAll();
 			Application.LoadLevel(Application.loadedLevelName);
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			objectivesController.HideCurrentObjectives();
+			objectivesController.HideCompletedObjectives();
 		}
 
 	}

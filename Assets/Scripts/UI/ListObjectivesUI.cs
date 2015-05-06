@@ -20,7 +20,7 @@ public class ListObjectivesUI : MonoBehaviour {
 	
 	public void Show(Action onHide) {
 		if (isShown) return;
-		
+
 		this.onHide = onHide;
 		LoadObjectives();
 		isShown = true;
@@ -28,6 +28,7 @@ public class ListObjectivesUI : MonoBehaviour {
 	}
 	
 	public void Hide() {
+		print("hide");
 		if (!isShown) return;
 		
 		isShown = false;

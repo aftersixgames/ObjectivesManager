@@ -34,7 +34,7 @@ public class ObjectivesController : MonoBehaviour {
 	}
 
 	public void ShowCompletedObjectives() {
-		completedObjectivesUI.Show(null);
+		ShowCompletedObjectives(null);
 	}
 
 	public void ShowCompletedObjectives(Action onHide) {
