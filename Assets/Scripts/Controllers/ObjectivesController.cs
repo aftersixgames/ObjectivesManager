@@ -10,32 +10,7 @@ public class ObjectivesController : MonoBehaviour {
 	public CompletedObjectivesUI completedObjectivesUI;
 
 	void Start () {
-		PlayerPrefs.DeleteAll ();
 		objectivesManager.Init();
-	}
-
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			AddProgress ("test", 1);
-			AddProgress ("test2", 1);
-		}
-
-		if (Input.GetKeyDown(KeyCode.F2)) {
-			ShowCompletedObjectives(() => { print("Hide completed"); });
-		}
-
-		if (Input.GetKeyDown(KeyCode.F1)) {
-			ShowCurrentObjectives(() => { print("Hide current"); });
-		}
-
-		if (Input.GetKeyDown(KeyCode.Escape)) {
-			HideCurrentObjectives();
-			HideCompletedObjectives();
-		}
-
-		if (Input.GetKeyDown(KeyCode.Return)) {
-			ShowCurrentObjectives();
-		}
 	}
 
 	public void AddProgress(string key, float progress) {
@@ -71,11 +46,11 @@ public class ObjectivesController : MonoBehaviour {
 		completedObjectivesUI.Hide();
 	}
 
-	public static ObjectivesController getCurrent() {
-		return getCurrent("ObjectivesController");
+	public static ObjectivesController GetCurrent() {
+		return GetCurrent("ObjectivesController");
 	}
 
-	public static ObjectivesController getCurrent(string name) {
+	public static ObjectivesController GetCurrent(string name) {
 		return GameObject.Find(name).GetComponent<ObjectivesController>();
 	}
 }
