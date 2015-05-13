@@ -10,10 +10,10 @@ public class ListObjectivesUI : MonoBehaviour {
 	public GameObject objectivePrefab;
 	public RectTransform container;
 	public GameObject panel;
-	
+
 	private Action onHide;
 	private bool isShown;
-	
+
 	public void Show() {
 		Show(null);
 	}
