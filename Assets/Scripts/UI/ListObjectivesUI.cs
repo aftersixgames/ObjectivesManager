@@ -27,8 +27,7 @@ public class ListObjectivesUI : MonoBehaviour {
 		panel.SetActive(true);
 	}
 	
-	public void Hide() {
-		print("hide");
+	public void Hide() {		
 		if (!isShown) return;
 		
 		isShown = false;

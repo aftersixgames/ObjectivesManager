@@ -6,6 +6,12 @@ using System.Collections.Generic;
 
 public class CompletedObjectivesUI : ListObjectivesUI {
 
+	public RectTransform scrollBarHandle;
+
+	void Start() {
+		FixScrollBarHandlePosition();
+	}
+
 	protected override void LoadObjectives() {
 		ResizeContainer();
 		base.LoadObjectives();
@@ -16,5 +22,10 @@ public class CompletedObjectivesUI : ListObjectivesUI {
 		size.y = 75 * objectives.Count;
 
 		container.sizeDelta = size;
+	}
+
+	private void FixScrollBarHandlePosition() {
+		scrollBarHandle.offsetMin = new Vector2(-10, -10);
+		scrollBarHandle.offsetMax = new Vector2(10, 10);
 	}
 }
