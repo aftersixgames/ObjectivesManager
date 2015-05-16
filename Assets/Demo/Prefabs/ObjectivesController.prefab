@@ -2676,6 +2676,46 @@ MonoBehaviour:
       disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
       currentProgress: 0
       earned: 0
+    - key: s_key
+      description: Press S key 10 times
+      targetProgress: 10
+      saveEveryProgress: 0
+      enabledImage: {fileID: 21300000, guid: 335b37ca974b42d4e9f81466e8c0b80a, type: 3}
+      disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
+      currentProgress: 0
+      earned: 0
+    - key: space_key_1
+      description: Press space key 30 times (you can restart)
+      targetProgress: 30
+      saveEveryProgress: 1
+      enabledImage: {fileID: 21300000, guid: 335b37ca974b42d4e9f81466e8c0b80a, type: 3}
+      disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
+      currentProgress: 0
+      earned: 0
+    - key: space_key_2
+      description: Press space key 10 times
+      targetProgress: 10
+      saveEveryProgress: 0
+      enabledImage: {fileID: 21300000, guid: 335b37ca974b42d4e9f81466e8c0b80a, type: 3}
+      disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
+      currentProgress: 0
+      earned: 0
+    - key: as_keys
+      description: Press A and S keys simultaniously
+      targetProgress: 1
+      saveEveryProgress: 0
+      enabledImage: {fileID: 21300000, guid: 335b37ca974b42d4e9f81466e8c0b80a, type: 3}
+      disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
+      currentProgress: 0
+      earned: 0
+    - key: button
+      description: Click on Button 3 times
+      targetProgress: 3
+      saveEveryProgress: 0
+      enabledImage: {fileID: 21300000, guid: 335b37ca974b42d4e9f81466e8c0b80a, type: 3}
+      disabledImage: {fileID: 21300000, guid: c1d2a7e2b35eec44b81fc5a9cb97c41a, type: 3}
+      currentProgress: 0
+      earned: 0
     current: []
     completed: []
   earnedObjectiveUI: {fileID: 11411954}
