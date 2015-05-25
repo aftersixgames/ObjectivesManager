@@ -15,14 +15,14 @@ public class SceneController : MonoBehaviour {
 			objectivesController.AddProgress("s_key", 1);
 		}
 
-    if (Input.GetKeyDown(KeyCode.Space)) {
-      objectivesController.AddProgress("space_key_1", 1);
-      objectivesController.AddProgress("space_key_2", 1);
-    }
+	    if (Input.GetKeyDown(KeyCode.Space)) {
+	      objectivesController.AddProgress("space_key_1", 1);
+	      objectivesController.AddProgress("space_key_2", 1);
+	    }
 
-    if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.S)) {
-      objectivesController.AddProgress("as_keys", 1);
-    }
+	    if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.S)) {
+	      objectivesController.AddProgress("as_keys", 1);
+	    }
 
 		if (Input.GetKeyDown(KeyCode.F1)) {
 			objectivesController.ShowCurrentObjectives();

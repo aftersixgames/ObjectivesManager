@@ -97,7 +97,7 @@ GameObject:
   - 224: {fileID: 16460840}
   - 222: {fileID: 16460839}
   - 114: {fileID: 16460838}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - 224: {fileID: 210398460}
   - 222: {fileID: 210398462}
   - 114: {fileID: 210398461}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -357,7 +357,7 @@ GameObject:
   - 224: {fileID: 693970665}
   - 222: {fileID: 693970667}
   - 114: {fileID: 693970666}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - 223: {fileID: 750122850}
   - 114: {fileID: 750122849}
   - 114: {fileID: 750122848}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
 --- !u!114 &886807313 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11497432, guid: 1ccfc80c2d61ed749ba5d4ee9e26df09,
@@ -558,6 +558,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490330, guid: 1ccfc80c2d61ed749ba5d4ee9e26df09, type: 2}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430612, guid: 1ccfc80c2d61ed749ba5d4ee9e26df09, type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451080, guid: 1ccfc80c2d61ed749ba5d4ee9e26df09, type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450492, guid: 1ccfc80c2d61ed749ba5d4ee9e26df09, type: 2}
+      propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -633,7 +645,7 @@ GameObject:
   - 224: {fileID: 1478687619}
   - 222: {fileID: 1478687621}
   - 114: {fileID: 1478687620}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +712,7 @@ GameObject:
   - 222: {fileID: 1816722648}
   - 114: {fileID: 1816722647}
   - 114: {fileID: 1816722646}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,12 +776,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 161501943}
-        m_MethodName: 
+      - m_Target: {fileID: 161501944}
+        m_MethodName: OnButtonCLicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
