@@ -10,24 +10,24 @@ public class ListObjectivesUI : MonoBehaviour {
 	public GameObject objectivePrefab;
 	public RectTransform container;
 	public GameObject panel;
-	
+
 	private Action onHide;
 	private bool isShown;
-	
+
 	public void Show() {
 		Show(null);
 	}
 	
 	public void Show(Action onHide) {
 		if (isShown) return;
-		
+
 		this.onHide = onHide;
 		LoadObjectives();
 		isShown = true;
 		panel.SetActive(true);
 	}
 	
-	public void Hide() {
+	public void Hide() {		
 		if (!isShown) return;
 		
 		isShown = false;
