@@ -1,7 +1,7 @@
 # ObjectivesManager
 
 With this package, you can easily add objectives to your Unity3D games.
-You can see it working on th demo scene.
+You can see it working on the demo scene.
 Unity3D 5 or newer is required.
 
 ### Geting started
