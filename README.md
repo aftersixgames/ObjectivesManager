@@ -1,11 +1,14 @@
 # ObjectivesManager
 
-With this package, you can easily add objectives to your Unity 3D games.
+With this package, you can easily add objectives to your Unity3D games.
 You can see it working on th demo scene.
+Unity3D 5 or newer is required.
 
 ### Geting started
 
-- Import the package
+- [Download](https://github.com/aftersixgames/ObjectivesManager/releases/tag/0.0.1) the package
+- Import on yout Unity3D project.
+- Add an EventSystem to yout scene if it doesn't already have one
 - Drag the `ObjectivesController` prefab to your scene.
 - Add your objectives list
 - Create a new prefab with your customized objectives or apply the changes to the original.
